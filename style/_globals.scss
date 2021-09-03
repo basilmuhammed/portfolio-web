@@ -1,0 +1,113 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+.pattern{
+    // background-color: #000000;
+    // background-image: radial-gradient(#2a2a2a 0.55px, #000000 0.55px);
+    // background-size: 11px 11px;
+    z-index: -2;
+}
+.pattern-white{
+    color: $med-black;
+    background-color: #ffffff;
+    background-image: radial-gradient(#c9c9c949 0.65px, #ffffff 0.65px);
+    background-size: 11px 11px;
+}
+.pattern-dark{
+    color: $light-gray;
+    background-color: #000000;
+    background-image: radial-gradient(#363636ab 0.65px, #000000 0.65px);
+    background-size: 11px 11px;
+
+    .social-icons{
+        filter: invert(1);
+    }
+}
+
+h1,h2,h3 {
+    font-family: $primary-font;
+    margin: 0;
+}
+p{
+    font-family: $secondary-font;
+    font-size: .8rem;
+    line-height: 1rem;
+    margin: 0;
+ 
+}
+
+h1{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+h4{
+    font-family: $primary-font;
+    font-size: .9rem;
+    font-weight: 400;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: $ligh-white;
+}
+
+[data-aos="blur-anim"] {
+
+  &.aos-animate {
+        opacity: 1;
+        filter: blur(0px);
+  }
+
+}
+
+@include b-up(md){
+    h1{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
+@include b-up(lg){
+    h1{
+        font-size: 4rem;
+        list-style: 5rem;
+    }
+    h3{
+        font-size: 3rem;
+        line-height: 2rem;
+    }
+    p{
+        font-size: 1rem;
+        line-height: 1.3rem;
+        font-weight: 300;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+}
+
+@include b-up(lg){}

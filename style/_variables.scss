@@ -1,0 +1,30 @@
+$primary-font : 'Poppins', sans-serif;
+$secondary-font : 'Nunito', sans-serif;
+$mono: 'Roboto Mono', monospace;
+
+$ligh-white:#F7F7FF;
+$gray:#e5e5e5;
+$light-gray:#f8f9fa;
+$light-dark:#343740;
+$med-black:#212529;
+$dark-black: #141414;
+
+
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("sm": "40em", "md": "64em", "lg": "87.5em");
+
+// 639px, 1023px, 1399px
+// $breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.4375em");
+
+@mixin b-up($size){
+  @media (min-width: map-get($breakpoints-up, $size)){
+    @content;
+  }
+}
+
+// @mixin breakpoint-down($size){
+//   @media (max-width: map-get($breakpoints-down, $size)){
+//     @content;
+//   }
+// }
