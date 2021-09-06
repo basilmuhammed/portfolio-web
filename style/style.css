@@ -41,8 +41,9 @@ body.noscroll {
   background-size: 11px 11px;
 }
 
-.pattern-dark a {
+.pattern-dark a, .pattern-dark span {
   color: #f8f9fa;
+  font-family: "Nunito", sans-serif;
 }
 
 .pattern-dark .social-icons {
@@ -55,7 +56,7 @@ h1, h2, h3 {
   margin: 0;
 }
 
-p {
+p, a, span {
   font-family: "Nunito", sans-serif;
   font-size: .8rem;
   line-height: 1rem;
@@ -110,13 +111,89 @@ a {
     font-size: 3rem;
     line-height: 2rem;
   }
-  p {
+  p, a, span {
     font-size: 1rem;
     line-height: 1.3rem;
     font-weight: 300;
   }
   h4 {
     font-size: 1.2rem;
+  }
+}
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 102;
+  overflow-y: hidden;
+}
+
+.loaded {
+  display: none;
+}
+
+.lds-ripple {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fed;
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+@-webkit-keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
 }
 
@@ -790,6 +867,13 @@ a {
           flex-direction: column;
 }
 
+.project__container-display .glide__slide a, .project__container-display .glide__slide span {
+  display: block;
+  color: rgba(255, 255, 255, 0.767);
+  padding: .3rem 0;
+  font-size: .9rem;
+}
+
 @media (min-width: 64em) {
   .project__container-display .glide__slide {
     -webkit-box-orient: horizontal;
@@ -818,11 +902,6 @@ a {
   width: 100%;
 }
 
-.project__container-display .glide__slide .image source {
-  border-radius: .9rem;
-  width: 100%;
-}
-
 .project__container-display .glide__slide .desc {
   padding: 2rem 0rem;
 }
@@ -834,7 +913,7 @@ a {
   }
   .project__container-display .glide__slide .desc p {
     font-size: .9rem;
-    color: rgba(255, 255, 255, 0.767);
+    color: rgba(255, 255, 255, 0.877);
   }
 }
 

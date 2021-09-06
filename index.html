@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://unpkg.com/@glidejs/glide@3.2.3/dist/css/glide.core.min.css"
     />
@@ -20,15 +20,15 @@
       rel="stylesheet"
       href="https://unpkg.com/@glidejs/glide@3.2.3/dist/css/glide.theme.min.css"
     />
-    <script src="https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.js"></script>
+    <script src="https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.js"></script> -->
 
     <!-- jquery  -->
-    <script
+    <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></script> -->
     <!-- animjs  -->
     <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
@@ -40,7 +40,13 @@
     <link rel="stylesheet" href="./style//style.css" />
   </head>
   <body>
-    <div class="pattern pattern-white">
+    <div class="loader" id="loading">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="pattern pattern-white loading-screen">
       <!-- nav bar  -->
       <nav class="nav">
         <div class="nav__bar">
@@ -85,11 +91,7 @@
           </div>
         </div>
         <div class="hero__image">
-          <img
-            src="./assets/Asset 2.svg"
-            data-aos="fade-left"
-            alt="hero-image"
-          />
+          <img src="./assets/Asset 2.svg" alt="hero-image" />
         </div>
       </section>
 
@@ -295,262 +297,57 @@
         <div class="project__dis">
           <div class="project__container">
             <div class="project__container-select">
-              <p class="dev-button" onclick="changeToDev()">Developments</p>
               <p
-                class="project__container-select-active des-button"
-                onclick="changeToDes()"
+                class="project__container-select-active"
+                id="dev"
+                onclick="changeTo(this)"
               >
+                Developments
+              </p>
+              <p class="" id="des" onclick="changeTo(this)">
                 Design & Video edits
               </p>
             </div>
             <div
-              class="project__container-display glide"
+              class="project__container-display"
               data-aos="fade-in"
               id="development"
             >
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/invomak.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>Invo Mak</h3>
-                      <p>
-                        This React Project done for an advertising company to
-                        make and track invoices. User can track all invoice
-                        details and can make a new invoice with just adding only
-                        basic details After adding invoice details user can
-                        download the copy of invoice directly from the web. This
-                        so fast making invoices and tracking invoice data.
-                        Project have limited login access so only allowed user
-                        can login to this web app.
-                        <br />
-                        <br />
-                        React js [react-pdf-renderer] - Tailwind css - Firebase
-                      </p>
-                    </div>
-                  </li>
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/teachers assist.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>Teacher's Assist</h3>
-                      <p>
-                        This is a web application to assist teachers to add
-                        students details and examination results also teachers
-                        can use this for adding their daily attendence. This
-                        only access for pre added members (admin can add or
-                        delete teachers account) teachers only allowed to change
-                        the students marks and performance.
-                        <br />
-                        <br />
-                        Node js - Express - MongoDB - Handlebar
-                        <br />
-                        <a href=""> For more...</a>
-                      </p>
-                    </div>
-                  </li>
-
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/airbnb clone.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>Airbnb Clone</h3>
-                      <p>
-                        This is simple airbnb frontend clone with using some api
-                        to add random datas. project completely build using
-                        reactjs so this very fast and no reloading user can
-                        easily switch between tabs. also added a mapbox map to
-                        track hotel locations.
-                        <br />
-                        <br />
-                        Reacj js - Next js - Mapbox - Tailwind css - Versal
-                        <br />
-                        <a href="">For More...</a>
-                      </p>
-                    </div>
-                  </li>
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/easybank.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>easy bank</h3>
-                      <p>
-                        This project done as part of frontend developer
-                        challange, so this only a simple website to showcase
-                        details. this projected styled using scss its very
-                        comfortable to use, this done for improve my frontend
-                        developing skills.
-                        <br />
-                        <br />
-                        Html5 - scss - js
-                        <br />
-                        <a href="">For more...</a>
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+              <div class="glide__slide">
+                <div class="image">
+                  <img class="image-src" src="./assets/t.jpg" alt="" />
+                </div>
+                <div class="desc">
+                  <h3 class="proj-heading">Invo Mak</h3>
+                  <p class="proj-desc">
+                    This React Project done for an advertising company to make
+                    and track invoices. User can track all invoice details and
+                    can make a new invoice with just adding only basic details
+                    After adding invoice details user can download the copy of
+                    invoice directly from the web. This so fast making invoices
+                    and tracking invoice data. Project have limited login access
+                    so only allowed user can login to this web app.
+                    <br />
+                    <br />
+                  </p>
+                  <span class="proj-soft"
+                    >React js [react-pdf-renderer] - Tailwind css - Firebase
+                  </span>
+                  <a class="proj-link" href="">For more...</a>
+                </div>
               </div>
 
-              <div
-                class="project__container-display-aroow"
-                data-glide-el="controls"
-              >
+              <div class="project__container-display-aroow">
                 <div
                   class="project__container-display-arrow-right"
-                  data-glide-dir=">"
+                  id="rightarrow"
                 ></div>
                 <div
                   class="project__container-display-arrow-left"
-                  data-glide-dir="<"
+                  id="leftarrow"
                 ></div>
               </div>
             </div>
-
-            <div
-              class="project__container-display glide2"
-              data-aos="fade-in"
-              id="design"
-            >
-              <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                  <li class="glide__slide">
-                    <div class="image">
-                      <video width="100%" height="auto" autoplay muted loop>
-                        <source
-                          src="./assets/nasra campus news.mp4"
-                          type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                    <div class="desc">
-                      <h3>Campus News - Logo Design</h3>
-                      <p>
-                        Logo and logo intro animation done for nasra campus
-                        news. this is minimal and simple logo.
-                        <br />
-                        <br />
-                        Adobe After Effect - Adobe Illustrator
-                        <br />
-                        <a href=""> For more...</a>
-                      </p>
-                    </div>
-                  </li>
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/ilahiya banner design.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>Banner Design</h3>
-                      <p>
-                        This are the banners designed for ilahiya college
-                        admission related. simple vector files so that doesn't
-                        have any quality issues.
-                        <br />
-                        <br />
-                        Adobe Illustrator
-                      </p>
-                    </div>
-                  </li>
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/barbaarian thumbnail.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>Barabian - Video Edit</h3>
-                      <p>
-                        This is a rap video. we done all the video parts include
-                        the thumbnail also its english and malayalam mix rap
-                        song. completely using created using the premiere pro.
-                        <br />
-                        <br />
-                        Adobe Premiere Pro
-                        <br />
-                        <a href="">For More...</a>
-                      </p>
-                    </div>
-                  </li>
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/VIBE FINAL 2.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>Vibe - Short Film</h3>
-                      <p>
-                        this is my first shortfilm. this is done for a college
-                        competiton (theme: drug usages) . my college friends
-                        helped me to complege these all the video and Editing
-                        done by me. and it have a lot of beginner issues.
-                        <br />
-                        <br />
-                        Adobe Premiere Pro
-                        <br />
-                        <a href="">For more...</a>
-                      </p>
-                    </div>
-                  </li>
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/thaslees.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>Thanslees - Logo Design</h3>
-                      <p>
-                        this is the logo of Thaslees fish exoprts. completely
-                        minimalastic and modern looking logo and tail of fish
-                        and exporting thing in that logo and its easy to
-                        identify company purpouse from the logo.
-                        <br />
-                        <br />
-                        Adobe Illustrator
-                        <br />
-                        <a href="">For more...</a>
-                      </p>
-                    </div>
-                  </li>
-                  <li class="glide__slide">
-                    <div class="image">
-                      <img src="./assets/homosapiens.jpg" alt="" />
-                    </div>
-                    <div class="desc">
-                      <h3>Socio Sapiens - Logo Design</h3>
-                      <p>
-                        this is the logo of socio sapiens the youtube channel.
-                        completely minimalastic and modern looking logo. socio
-                        sapien is a history related youtube channel so we added
-                        a map inside the logo and also included the two s from
-                        the name socio sapien.
-                        <br />
-                        <br />
-                        Adobe Illustrator
-                        <br />
-                        <a href="">For more...</a>
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div
-                class="project__container-display-aroow"
-                data-glide-el="controls"
-              >
-                <div
-                  class="project__container-display-arrow-right"
-                  data-glide-dir=">"
-                ></div>
-                <div
-                  class="project__container-display-arrow-left"
-                  data-glide-dir="<"
-                ></div>
-              </div>
-            </div>
-            <!-- design container  -->
           </div>
         </div>
       </section>
