@@ -23,12 +23,20 @@ body {
 }
 .pattern-white{
     color: $med-black;
+    a{
+        color: $med-black;
+
+    }
     background-color: #ffffff;
     background-image: radial-gradient(#c9c9c949 0.65px, #ffffff 0.65px);
     background-size: 11px 11px;
 }
 .pattern-dark{
     color: $light-gray;
+    a{
+        color: $light-gray;
+
+    }
     background-color: #000000;
     background-image: radial-gradient(#363636ab 0.65px, #000000 0.65px);
     background-size: 11px 11px;
@@ -72,7 +80,6 @@ h4{
 }
 a{
     text-decoration: none;
-    color: $ligh-white;
 }
 
 [data-aos="blur-anim"] {

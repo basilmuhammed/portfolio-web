@@ -309,7 +309,7 @@ font-weight: 500;}
 // education 
 
 .education {
-    padding: 3rem 3rem;
+    padding: 3rem 1rem 3rem 3rem;
     @include b-up(lg){
     margin: 3rem 15rem;
 }
@@ -322,7 +322,7 @@ font-weight: 500;}
     &__head{
         float: right;
         line-height: 1.7rem;
-        padding-right: 2rem;
+        padding-right: 1rem;
         margin-bottom: 2rem;
         h3{
             margin-left: 5rem;
@@ -500,6 +500,7 @@ font-weight: 500;}
                                 opacity: .95;
                                 width: 100%;
                             }
+                           
                         }
                         .desc{
                             padding: 2rem 0rem;
@@ -527,7 +528,7 @@ font-weight: 500;}
                     border-top: .8rem solid transparent;
                     border-bottom: .8rem solid transparent;
                     border-left: 1rem solid $ligh-white;
-                    user-select: none;
+                    touch-action: none;
                 
                 }
                 &-left{
