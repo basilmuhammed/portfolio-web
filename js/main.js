@@ -138,7 +138,8 @@ rightArrow.addEventListener("click", () => {
   } else {
     slide++;
   }
-  displayProj(slide);
+  setTimeout(displayProj(slide), 1000);
+  // displayProj(slide);
 });
 
 leftArrow.addEventListener("click", () => {
@@ -147,7 +148,8 @@ leftArrow.addEventListener("click", () => {
   } else {
     slide--;
   }
-  displayProj(slide);
+  setTimeout(displayProj(slide), 1000);
+  // displayProj(slide);
 });
 
 function displayProj(order) {
