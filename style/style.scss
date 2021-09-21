@@ -138,15 +138,41 @@
             line-height: 1.8rem;
             h3{
                 font-size: 1.2rem;
-@include b-up(lg){
-    font-size: 1.5rem;
-    padding-top: 1rem;
-}
+                    @include b-up(lg){
+                        font-size: 1.5rem;
+                        padding-top: 1rem;
+                    }
 
             }
-            @include b-up(md){
-             text-align: left; 
-             padding-bottom: 4rem;  
+                    @include b-up(md){
+                    text-align: left; 
+                    padding-bottom: 4rem;  
+                    }
+
+            &__butdown{
+                font-family: $primary-font;
+                border: 1px solid black;
+                padding: .4rem;
+                font-size: .7rem;
+                margin: 2rem 0;
+                background: transparent;
+                cursor: pointer;
+                font-weight: 500;
+                transition: 500ms all ease-in-out;
+                border-radius: 1rem;
+
+                @include b-up(md){
+                    padding: .5rem;
+                margin-top: 2rem;
+                font-size: .9rem;
+                }
+
+                &:hover{
+                    background-color:rgb(33, 32, 36) ;
+                    color: #fff;
+                    border: none;
+                    transform: scale(110%);
+                }
             }
         }
         &__social{

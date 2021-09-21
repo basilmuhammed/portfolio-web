@@ -87,6 +87,8 @@ h4 {
 
 a {
   text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-size: .8rem;
 }
 
 [data-aos="blur-anim"].aos-animate {
@@ -317,6 +319,36 @@ a {
     text-align: left;
     padding-bottom: 4rem;
   }
+}
+
+.hero__contents__content__butdown {
+  font-family: "Poppins", sans-serif;
+  border: 1px solid black;
+  padding: .4rem;
+  font-size: .7rem;
+  margin: 2rem 0;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  -webkit-transition: 500ms all ease-in-out;
+  transition: 500ms all ease-in-out;
+  border-radius: 1rem;
+}
+
+@media (min-width: 64em) {
+  .hero__contents__content__butdown {
+    padding: .5rem;
+    margin-top: 2rem;
+    font-size: .9rem;
+  }
+}
+
+.hero__contents__content__butdown:hover {
+  background-color: #212024;
+  color: #fff;
+  border: none;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
 }
 
 .hero__contents__social {
